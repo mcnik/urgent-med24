@@ -6,7 +6,6 @@
     <title>UrgentMed24 - Locate 24/7 Urgent Care Services in San Francisco</title>
     <meta name="description" content="One Page Layout">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700">
     <link rel="stylesheet" href="styles/font-awesome.css">
     <link rel="stylesheet" href="styles/owl.carousel.css">
@@ -22,13 +21,148 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/main-responsive.css">
-    <style>
+    <style type="text/css">
     .newspaper-a{  width: 100%;  max-width: 100%;  text-align: left;  border-collapse: collapse;  border: 1px solid #69c;}
     .newspaper-a th{  padding: 12px 17px 12px 17px;  border-bottom: 1px dashed #69c;}
     .newspaper-a td{  padding: 7px 17px 7px 17px;  }
     .newspaper-a tbody tr:hover td{  color: #339;  background: #d0dafd;}
     .urgent {  background-color: #d8d8d8 !important;}
     .other {  background-color: #fa0 !important;}
+   
+  .panel {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    font-size: .8em;
+
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+            perspective: 600px;
+  }
+  /* -- make sure to declare a default for every property that you want animated -- */
+  /* -- general styles, including Y axis rotation -- */
+  .panel .front {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+       -moz-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  .panel.flip .front {
+    z-index: 900;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+
+  .panel .back {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0);
+
+    -webkit-transform: rotateY(-180deg);
+       -moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
+            transform: rotateY(-179deg);
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+
+  .panel.flip .back {
+    z-index: 1000;
+
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+       -moz-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  }
+
+  
+  /* -- contact panel -- */
+  .contact {
+    width: 290px;
+    height: 270px;
+  }
+
+    /* -- cosmetics -- */
+  .panel .pad {padding: 0 15px; }
+  .panel.flip .action {display: none; }
+  .block ol li {text-align: left; margin: 0 0 0 28px; }
+  .block .action {display: block; padding: 3px; background: #333; text-align: right; font-size: .8em; opacity: 0; position: absolute; cursor: pointer; -webkit-transition: opacity .2s linear; }
+  .block:hover .action {opacity: .7; }
+  .circle div {border-radius: 100px; }
+  .circle div h2 {padding-top: 3em; text-align: center; }
+.button-link {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background: #356094;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+
+.featuredImg {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
     </style>
     <link id="primary_color_scheme" rel="stylesheet" href="styles/theme_meadow.css">
     <script src="scripts/vendor/modernizr.js"></script>
@@ -152,18 +286,42 @@
             </div>
             <!-- end slide-->
           </div>
-          <!--       /sl-slider-->
+          <!-- /sl-slider-->
           <nav id="nav-arrows" class="nav-arrows"><span class="nav-arrow-prev">Previous</span><span class="nav-arrow-next">Next</span></nav>
           <nav id="nav-dots" class="nav-dots"><span class="nav-dot-current"></span><span></span><span></span></nav>
         </div>
-        <!--     /slider-wrapper-->
+        <!-- /slider-wrapper-->
       </section>
       <!-- End Home Section-->
       <section class="sep-top-2x">
         <div class="container">
           <div class="row">
-        <div id="search-results" class="">
-          <table style="display: none" id="results-table" class="newspaper-a">
+            <div id="search-results" class="">
+              <div id="results-table" style="display: none;" class="contact panel">
+                <div class="front">
+                  <h3>House Call</h3>
+                  <a href="http://www.er-direct.com/"><img src="erd.png" class="featuredImg"></a>
+                  <h5>Will reach you in: 50 minutes.</h5>
+                  <h5>Current price: $100</h5><br><br>
+                  <p><a class="action button-link" href="#form">Book</a></p>
+                </div>
+                <div class="back" id="contact">
+                  <div class="pad">
+                    <a href="http://www.er-direct.com/">
+                      <img src="erd.png" class="featuredImg" style="width:42%; float:right;">
+                    </a>
+                    <h6>Please fill in the form and the provider will call you in 15 minutes.</h6><br>
+                    <form method="post">
+                      <input id="f-name" name="f-name" placeholder="Name" class="input-sm" style="width:100%;" type="text" required>
+                      <input id="f-email" name="f-email" placeholder="Email" class="input-sm" style="width:100%;" type="email" required>
+                      <input id="f-tel" name="f-tel" placeholder="Phone" class="input-sm" style="width:100%;" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" title="Please enter a valid US phone number." required>
+                      <p><textarea id="f-msg" name="f-msg" placeholder="Enter your message" class="input-sm" style="width:100%;">
+                      </textarea></p><input class="button-link" type="submit" value="Send Message">
+                    </form>
+                  </div>
+                </div>
+              </div>
+          <!-- <table style="display: none" id="results-table" class="newspaper-a">
             <thead>
               <tr>
                 <th data-field="Name">Name</th>
@@ -177,27 +335,28 @@
               <tr>
                 <td><img src="img/omg.png" alt="" style="width:10em; height:auto;"></td>
                 <td>Urgent Care</td>
-                <td>415-578-310</td>
+                <td><a href="tel:415-578-310"><img src="img/phone.png" alt="" style="width:4em; height:auto; margin-left:2em;"></a></td>
                 <td><a href="http://www.onemedical.com">onemedical.com</a></td>
                 <td>Mon-Fri: 8am-6pm</td>
               </tr>
               <tr>
                 <td><img src="img/omg.png" alt="" style="width:10em; height:auto;"></td>
                 <td>Urgent Care</td>
-                <td>415-529-456</td>
+                <td><a href="tel:415-578-310"><img src="img/phone.png" alt="" style="width:4em; height:auto; margin-left:2em;"></a></td>
                 <td><a href="http://www.onemedical.com">onemedical.com</a></td>
                 <td>Mon-Fri: 9am-6pm</td>
               </tr>
               <tr>
                 <td><img src="img/omg.png" alt="" style="width:10em; height:auto;"></td>
                 <td>Urgent Care</td>
-                <td>415-644-526</td>
+                <td><a href="tel:415-578-310"><img src="img/phone.png" alt="" style="width:4em; height:auto; margin-left:2em;"></a></td>
                 <td><a href="http://www.onemedical.com">onemedical.com</a></td>
                 <td>Mon-Fri: 8am-6pm</td>
               </tr>
             </tbody>
-          </table>
-        </div></div></div>
+          </table> -->
+        </div>
+      </div></div>
       </section>
       <!-- Start About section-->
       <section id="about" class="sep-top-2x sep-bottom-3x">
@@ -472,15 +631,57 @@
     <script src="scripts/circle_diagram.js"></script>
     <script src="scripts/main.js"></script>
     <script>
-    </script>
-    <script type="text/javascript">
-    
-    </script>
+  $(document).ready(function(){
+
+    // set up hover panels
+    // although this can be done without JavaScript, we've attached these events
+    // because it causes the hover to be triggered when the element is tapped on a touch device
+    $('.hover').hover(function(){
+      $(this).addClass('flip');
+    },function(){
+      $(this).removeClass('flip');
+    });
+
+    // set up click/tap panels
+    $('.click').toggle(function(){
+      $(this).addClass('flip');
+    },function(){
+      $(this).removeClass('flip');
+    });
+
+    // set up block configuration
+    $('.block .action').click(function(){
+      $('.block').addClass('flip');
+    });
+    $('.block .edit-submit').click(function(e){
+      $('.block').removeClass('flip');
+
+      // why not update that list for fun?
+      $('#list-title').text($('#form_title').val());
+      $('#list-items').empty();
+      for (var num = $('#form_items').val(); num >= 1; num--) {
+        $('#list-items').append('<li>Super seller</li>');
+      }
+      e.preventDefault();
+    });
+
+    // set up contact form link
+    $('.contact .action').click(function(e){
+      $('.contact').addClass('flip');
+      e.preventDefault();
+    });
+    $('.contact .edit-submit').click(function(e){
+      $('.contact').removeClass('flip');
+      e.preventDefault();
+    });
+
+  });
+</script>
     <script>
     $(document).ready(function() {
-      $("#search-submit-btn").on('click', function() {
+      /*$("#search-submit-btn").on('click', function() {
         ga('send', 'event', 'button', 'click', 'search');
-      });
+      });*/
       $("#search-submit-btn").click(function(e) {
         document.getElementById("results-table").style.display = "table"
         var postData = $(this).serializeArray();
@@ -493,13 +694,13 @@
       });
     });
     </script>
-    <script>
+    <!--<script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'XX-XXXXXXXX-XX', 'auto');
       ga('send', 'pageview');
-    </script>
+    </script>-->
   </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MedAnalytics</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">
+            <header>
+                <div class="container clearfix">
+                    <h1>Overview <img src="ncm.jpg" class="chathead"><span>April 8-12, 2015</span><a class="button">Change Range</a></h1>
+                </div>
+            </header>
+            <div class="container clearfix">
+                <div class="third widget doughnut">
+                    <h3>Medication Regimen for Patient</h3>
+                    <p><a href="" class="button">Filter By Medicine</a></p>
+                    <div class="canvas-container">
+                        <canvas id="hours"></canvas>
+                        <span class=""></span>
+                    </div>
+                    <div class="chart-legend">
+                        <ul>
+                            <li class="ship">Medicine One</li>
+                            <li class="rework">Rekt</li>
+                            <li class="admin">Advice</li>
+                            <li class="prod">Potion</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="third widget line">
+                    <div class="chart-legend">
+                        <h3>Over Time</h3>
+                        <p><span>This Week</span> &mdash; <strong>Last Week</strong></p>
+                        <p><a href="" class="button">Change Range</a><a href="" class="button">Filter by Medicine Type</a></p>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="shipments"></canvas>
+                    </div>
+                </div>
+                <div class="third widget">
+                    <div class="chart-legend">
+                        <h3>Patient Assessment</h3>
+                        <p>Incidents</p>
+                        <p><a href="" class="button" onclick="update()">Assess</a></p>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="departments"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="push"></div>
+        </div>
+        <footer>
+            <div class="container">
+                &copy; &mdash; Contact<a href=""></a>
+            </div>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
