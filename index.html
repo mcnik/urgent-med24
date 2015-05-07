@@ -363,9 +363,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div style="background-image: url(img/intro-home1.jpg);" class="sl-slide-inner">
                 <div class="slide-container">
                   <div class="slide-content text-center">
-                    <h2 class="main-title">Lorem Ipsum Dolor</h2>
+                    <h2 class="main-title">Get medical care from the comfort of your home</h2>
                     <blockquote>
-                      <p>Get medical care from the comfort of your home</p>
                       <p>Search and compare medical house calls companies</p>
                       <input id="search-zipcode-field" type="text" class="input-lg" placeholder="Your Zip Code" >
                       <div class="btn-group">
@@ -387,9 +386,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div style="background-image: url(img/intro-home7.jpg);" class="sl-slide-inner">
                 <div class="slide-container">
                   <div class="slide-content text-center">
-                    <h2 class="main-title">Lorem Ipsum Dolor</h2>
+                    <h2 class="main-title">Get an instant access to a doctor</h2>
                     <blockquote>
-                      <p>Get an instant access to a doctor</p><!--<a href="#" target="_blank" class="btn btn-primary btn-lg">Read More</a>-->
+                      <!--<a href="#" target="_blank" class="btn btn-primary btn-lg">Read More</a>-->
                       <p>Search and compare doctor on the phone companies</p>
                       <input id="search-zipcode-field" type="text" class="input-lg" placeholder="Your Zip Code" >
                       <div class="btn-group">
@@ -420,24 +419,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div id="search-results" class="">
               <div id="results-table" style="display: none;" class="contact panel">
                 <div class="front">
-                  <h3>House Call</h3>
+                  <h3 style="margin-top: 10px; background-color: #36c4e0; color: white;"><i class="fa fa-medkit"></i> House Call</h3>
                   <a href="http://www.er-direct.com/"><img src="erd.png" class="featuredImg"></a>
                   <h5>Will reach you in: 50 minutes.</h5>
                   <h5>Current price: $100</h5><br><br>
-                  <p><a class="action button-link" href="#form">Book</a></p>
+                  <p><a class="btn btn-primary btn-xs" href="#form" style="width: 80%; font-size: 1.5em;">Request a call now</a></p>
                 </div>
                 <div class="back" id="contact">
                   <div class="pad">
                     <a href="http://www.er-direct.com/">
                       <img src="erd.png" class="featuredImg" style="width:42%; float:right;">
                     </a>
-                    <h6>Please fill in the form and the provider will call you in 15 minutes.</h6><br>
+                    <p>Please fill in the form and the provider will call you in 15 minutes.</p><br style="font-size: 1.2em;">
                     <form method="post">
-                      <input id="f-name" name="f-name" placeholder="Name" class="input-sm" style="width:100%;" type="text" required>
-                      <input id="f-email" name="f-email" placeholder="Email" class="input-sm" style="width:100%;" type="email" required>
-                      <input id="f-tel" name="f-tel" placeholder="Phone" class="input-sm" style="width:100%;" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" title="Please enter a valid US phone number." required>
-                      <p><textarea id="f-msg" name="f-msg" placeholder="Enter your message" class="input-sm" style="width:100%;">
-                      </textarea></p><input class="button-link" type="submit" value="Send Message">
+                      <input id="f-name" name="f-name" placeholder="Name" class="form-control input-sm" style="width:100%;font-size: 1.5em;" type="text" required="">
+                      <input id="f-email" name="f-email" placeholder="Email" class="form-control input-sm" style="width:100%;font-size: 1.5em;" type="email" required="">
+                      <input id="f-tel" name="f-tel" placeholder="Phone" class="form-control input-sm" style="width:100%;font-size: 1.5em;" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$" title="Please enter a valid US phone number." required="">
+                        <p><textarea id="f-msg" name="f-msg" placeholder="Enter your message" class="form-control input-sm" style="width:100%;font-size: 1.5em;">   </textarea>
+                        </p>
+                      <input class="btn btn-primary btn-xs" type="submit" value="Send Request" style="width: 100%;font-size: 1.5em;">
                     </form>
                   </div>
                 </div>
@@ -526,7 +526,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="col-md-3 sep-top-2x icon-gradient">
               <div class="icon-box icon-horizontal icon-lg">
-                <div data-wow-delay=".5s" class="icon-content img-circle wow bounceInUp"><i class="fa fa-stethoscope"></i></div>
+                <div data-wow-delay=".5s" class="icon-content img-circle wow bounceInUp"><i class="fa fa-calendar"></i></div>
                 <div class="icon-box-content">
                   <h5 class="upper">Schedule</h5>
                   <p>Fit healthcare into your schedule.</p>
@@ -564,14 +564,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
               </div>
               <div data-wow-delay="1s" class="icon-box icon-lg sep-top-md icon-gradient wow bounceInRight">
-                <div class="icon-content img-circle"><i class="fa fa-hospital-o"></i></div>
+                <div class="icon-content img-circle"><i class="fa fa-stethoscope"></i></div>
                 <div class="icon-box-content">
                   <h5>Urgent Care</h5>
                   <p>Prefer to travel to a clinic? Find an urgent care center or walk in clinic near you.</p>
                 </div>
               </div>
               <div data-wow-delay="1s" class="icon-box icon-lg sep-top-md icon-gradient wow bounceInRight">
-                <div class="icon-content img-circle"><i class="fa fa-ambulance"></i></div>
+                <div class="icon-content img-circle"><i class="fa fa-hospital-o"></i></div>
                 <div class="icon-box-content">
                   <h5>Emergency Room</h5>
                   <p>If you have an emergency, please call 911 or go to the nearest emergency room.</p>
